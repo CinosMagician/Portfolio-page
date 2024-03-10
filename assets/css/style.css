@@ -1,0 +1,49 @@
+*{
+    font-family: sans-serif, 'Times New Roman', Times, serif;
+}
+
+/* 
+header {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: grey;
+    padding: 15px 0px;
+    align-items: center;
+
+} */
+
+/* .rightside {
+    position: absolute;
+    right: 25px;
+} */
+
+h1 {
+    text-align: end;
+    color: grey;
+    background-color: cyan;
+    width: 350px;
+    height: 70px;
+    font-size: 36px;
+}
+
+ul li{
+    
+    list-style-type: none;
+    display: inline;
+    font-size: 24px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+a {
+    color: cyan;
+}
+
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px 15px 0px;
+    background: grey;
+    align-items: center;
+  }
