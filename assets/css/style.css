@@ -1,19 +1,24 @@
 :root {
     --cyblu: #00ffff;
-    --backgrey: #808080;
-    --lblu: #add8e6;
+    --backgrey: #4b4b4b;
+    --lblu: #83e0ff;
+    --backpage: #1b0f20;
 }
 
 *{
-    font-family: sans-serif, 'Times New Roman', Times, serif;
-    color: black;
+    font-family: Georgia, serif;
+    color: var(--lblu)
 }
 
+::selection {
+    background: var(--cyblu);
+    color: white;
+}
 
 .main-header h1 {
     text-align: end;
-    color: #808080;
-    background-color: var(--cyblu);
+    color: var(--backgrey);
+    background-color: var(--lblu);
     width: 350px;
     padding: 10px;
     font-size: 36px;
@@ -32,14 +37,14 @@
     margin-right: 10px;
     padding-bottom: 5px;
     border-style: solid;
-    border-color: var(--cyblu);
+    border-color: var(--lblu);
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
 }
 
 .main-header a {
-    color: var(--cyblu);
+    color: var(--lblu);
     text-decoration: none;
 
 }
@@ -48,22 +53,21 @@
     display: flex;
     justify-content: space-between;
     padding: 15px 15px 15px 0px;
-    background: grey;
+    background: var(--backgrey);
     align-items: center;
-  }
+}
 
-  .backimage {
+.backimage {
     height: 300px;
     width: 100%;
-    background-image: url("../images/background.png");
+    background-image: url("../images/profileback.jpg");
     background-size: cover;
     background-position: center;
-    background-color: black;
 }
 
 .maincontainer{
     display: flex;
-    background-color: #f1f1f1d3;
+    background-color: var(--backpage);
 }
 
 #subtitle{
@@ -74,31 +78,7 @@
     padding: 10px;
     font-size: 36px;
     color: grey;
-    background-color: var(--cyblu);
-}
-
-
-.para p {
-    width: 100%;
-    height: auto;
-    font-size: 18px;
-    color: var(--lblu);
-}
-.para{
-    display: flex;
-    flex-direction: column;
-    min-height: auto;
-    max-height: fit-content;
-    min-width: 500px;
-    max-width: 500px;
-}
-
-.info h2{
-    width: 100%;
-    text-align: center;
-    line-height: 500px;
-    font-size: 36px;
-    color: var(--lblu);
+    background-color: var(--lblu);
 }
 
 .parent {
@@ -165,4 +145,103 @@
     border-top: 0px;
     border-bottom: 0px;
     border-right: 0px;
+}
+
+.gapcon {
+    display: flex;
+    line-height: 175px;
+    background-color: var(--backpage);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-evenly;
+    margin-top: 80px;
+    row-gap: 56px;
+    column-gap: 24px;
+}
+
+.work-box {
+    border: 2px solid var(--backgrey);
+    padding: 150px 10px 10px 10px;
+    transition: all 0.5s ease-in-out;
+    margin: 0px 50px;
+}
+
+
+.work-box h2 {
+    font-size: 32px;
+    margin: 24px 200px -2.5% -3%;
+    border: solid var(--cyblu);
+    padding: 8px;
+    position: relative;
+    background-color: var(--backgrey);
+    transition: all 0.5s ease-in-out;
+}
+
+.work-box:hover, .work-box:hover h2 {
+    box-shadow: 0 0 8px var(--cyblu),
+    0 0 15px var(--cyblu);
+}
+
+#project1 {
+    background-image: url("../images/project1.png");
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+}
+
+#project2 {
+    background-image: url("../images/project2.png");
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+}
+
+#project3 {
+    background-image: url("../images/project3.png");
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+}
+
+#project4 {
+    background-image: url("../images/project4.png");
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+}
+
+#project5 {
+    background-image: url("../images/project5.png");
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+}
+
+#project6 {
+    background-image: url("../images/project6.png");
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+}
+
+@media screen and (max-width: 1215px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .main-header ul li{
+        font-size: 16px;
+    }
 }
