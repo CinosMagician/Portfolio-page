@@ -1,3 +1,12 @@
+/* This sets the default fonts on the page and also default text colors */
+*{
+    font-family: Georgia, serif;
+    color: var(--lblu)
+}
+
+/* This defines our reused elements, in this case our colors, so that we can just call apon
+the values here and if we need to change any colors it will affect all elements
+with the defined var. */
 :root {
     --cyblu: #00ffff;
     --backgrey: #4b4b4b;
@@ -5,14 +14,13 @@
     --backpage: #1b0f20;
 }
 
-*{
-    font-family: Georgia, serif;
-    color: var(--lblu)
-}
-
-::selection {
-    background: var(--cyblu);
-    color: white;
+/* These classes affect the elements on the top of the page in the nav bar */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px 15px 0px;
+    background: var(--backgrey);
+    align-items: center;
 }
 
 .main-header h1 {
@@ -28,8 +36,8 @@
     padding-right: 30px;
 }
 
-.main-header ul li{
 
+.main-header ul li{
     list-style-type: none;
     display: inline;
     font-size: 24px;
@@ -49,14 +57,7 @@
 
 }
 
-.main-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 15px 15px 0px;
-    background: var(--backgrey);
-    align-items: center;
-}
-
+/* This class sets the banner image on the page */
 .backimage {
     height: 300px;
     width: 100%;
@@ -65,11 +66,14 @@
     background-position: center;
 }
 
+/* This is the parent flex container to contain both the sidebar elements 
+and the main body of content/texts */
 .maincontainer{
     display: flex;
     background-color: var(--backpage);
 }
 
+/* This id is for the box of text placed on the banner image */
 #subtitle{
     display:block;
     position: absolute;
@@ -81,11 +85,14 @@
     background-color: var(--lblu);
 }
 
+/* This class is used to space out and define how big we want the sidebar element to be */
 .parent {
     display: flex;
     height:fit-content;
     width: 35%;
 }
+
+/* This class is used for the sidebar elements */
 .subhead {
     width: 100%;
     height: 100%;
@@ -94,11 +101,16 @@
     font-size: 50px;
     color: var(--lblu);
 }
+
+/* This is the container to have multiple flexboxes but have them flow as a column
+This makes it so we can have spaces between the paragraphs */
 .vertcon {
     display: flex;
     flex-direction: column;
     width: 70%;
 }
+
+/* Defines the classes of the paragraphs */
 .p1, .p2 {
     flex: 1;
     width: 100%;
@@ -110,11 +122,14 @@
     border-right: 0px;
 }
 
+/* This class was made to make space and align the flexbox to the middle.
+Also another thing that could be improved on but wasnt entirely sure */
 .spacer {
     flex: 3;
     width: 100%;
 }
 
+/* These classes define the values used in the footer/bottom of the page */
 .footer {
     display: flex;
     justify-content: space-evenly;
@@ -139,6 +154,7 @@
     border-right: 0px;
 }
 
+/* this id gives the line running next to the containers but sets all other sides to 0 */
 #borderleft {
     border-style: solid;
     border-color: var(--lblu);
@@ -147,12 +163,16 @@
     border-right: 0px;
 }
 
+/* This class was just made to make space, I am sure there are ways to improve this
+or make it work without it but I could not find the solution this time */
 .gapcon {
     display: flex;
     line-height: 175px;
+    color: var(--backpage);
     background-color: var(--backpage);
 }
 
+/* This class defines the container that is set up as a grid layout */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -162,7 +182,8 @@
     column-gap: 24px;
 }
 
-.work-box {
+/* These classes set up the project boxes with the sizing, colours and the animation effect */
+.project-box {
     border: 2px solid var(--backgrey);
     padding: 150px 10px 10px 10px;
     transition: all 0.5s ease-in-out;
@@ -170,7 +191,7 @@
 }
 
 
-.work-box h2 {
+.project-box h2 {
     font-size: 32px;
     margin: 24px 200px -2.5% -3%;
     border: solid var(--cyblu);
@@ -180,11 +201,21 @@
     transition: all 0.5s ease-in-out;
 }
 
-.work-box:hover, .work-box:hover h2 {
+/* This gives us the glow color effect when hovering over the project elements */
+.project-box:hover, .project-box:hover h2 {
     box-shadow: 0 0 8px var(--cyblu),
     0 0 15px var(--cyblu);
+    cursor: pointer;
 }
 
+/* This changes the highlight color to match our page colors and give a bit more flair */
+::selection {
+    background: var(--cyblu);
+    color: white;
+}
+
+/* These ids house the background images for the project boxes
+they also have a black background in case images cannot be loaded. */
 #project1 {
     background-image: url("../images/project1.png");
     background-size: cover;
@@ -227,6 +258,7 @@
     background-color: black;
 }
 
+/* Here are the media quieries that change the page layout depending on the screen size. */
 @media screen and (max-width: 1215px) {
     .grid-container {
         grid-template-columns: 1fr;
@@ -243,5 +275,12 @@
 @media screen and (max-width: 860px) {
     .main-header ul li{
         font-size: 16px;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .subhead {
+        font-size: 20px;
     }
 }
