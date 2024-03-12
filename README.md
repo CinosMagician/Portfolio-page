@@ -4,6 +4,12 @@ This is my WIP portfolio page, here you will be able to access things such as di
 
 [Click Here](https://CinosMagician.github.io/Portfolio-page) to view the live webpage
 
+## Disclaimer
+
+This webpage is still a work in progress, and as such, certain elements have been left as default or placeholder. Projects will be updated later to have a corresponding image and project name will be replaced with an appropreate name.
+
+Besides the GitHub link, none of the contact info is correct and will not take you anywhere as of this stage. These will also be updated in the future.
+
 ## Usage
 
 Below are some images for the webpage:
