@@ -4,6 +4,17 @@
     color: var(--lblu)
 }
 
+/* Allows the page to visually scroll when elements are selected rather than teleport */
+html{
+    scroll-behavior: smooth;
+}
+
+/* setting text-decoration to none for all a elements on page as none want to have underline
+any a elements that do want it can override this change in that specific class */
+a {
+    text-decoration: none;
+}
+
 /* This defines our reused elements, in this case our colors, so that we can just call apon
 the values here and if we need to change any colors it will affect all elements
 with the defined var. */
@@ -12,6 +23,15 @@ with the defined var. */
     --backgrey: #4b4b4b;
     --lblu: #83e0ff;
     --backpage: #1b0f20;
+}
+
+.profile-image {
+    position: absolute;
+    top: 86px;
+    left: 0px;
+    height: 300px;
+    width: 300px;
+    background-image: url("../images/profile.jpg");
 }
 
 /* These classes affect the elements on the top of the page in the nav bar */
@@ -53,8 +73,6 @@ with the defined var. */
 
 .main-header a {
     color: var(--lblu);
-    text-decoration: none;
-
 }
 
 /* This class sets the banner image on the page */
@@ -144,7 +162,6 @@ Also another thing that could be improved on but wasnt entirely sure */
 }
 
 .footer a {
-    text-decoration: none;
     font-size: 24px;
     padding-bottom: 5px;
     border-style: solid;
@@ -190,6 +207,22 @@ or make it work without it but I could not find the solution this time */
     margin: 0px 50px;
 }
 
+.project-box-top {
+    border: 2px solid var(--backgrey);
+    padding: 330px 10px 10px 10px;
+    transition: all 0.5s ease-in-out;
+    margin: 0px 50px;
+}
+
+.project-box-top h2 {
+    font-size: 32px;
+    margin: 24px 608px -1% -1%;
+    border: solid var(--cyblu);
+    padding: 8px;
+    position: relative;
+    background-color: var(--backgrey);
+    transition: all 0.5s ease-in-out;
+}
 
 .project-box h2 {
     font-size: 32px;
@@ -202,7 +235,7 @@ or make it work without it but I could not find the solution this time */
 }
 
 /* This gives us the glow color effect when hovering over the project elements */
-.project-box:hover, .project-box:hover h2 {
+.project-box:hover, .project-box:hover h2, .project-box-top:hover, .project-box-top:hover h2 {
     box-shadow: 0 0 8px var(--cyblu),
     0 0 15px var(--cyblu);
     cursor: pointer;
@@ -217,7 +250,7 @@ or make it work without it but I could not find the solution this time */
 /* These ids house the background images for the project boxes
 they also have a black background in case images cannot be loaded. */
 #project1 {
-    background-image: url("../images/project1.png");
+    background-image: url("../images/digital-marketing-meeting.jpg");
     background-size: cover;
     background-position: center;
     background-color: black;
@@ -251,14 +284,13 @@ they also have a black background in case images cannot be loaded. */
     background-color: black;
 }
 
-#project6 {
-    background-image: url("../images/project6.png");
-    background-size: cover;
-    background-position: center;
-    background-color: black;
+/* Here are the media quieries that change the page layout depending on the screen size. */
+@media screen and (max-width: 1600px) {
+    .project-box-top h2 {
+        margin: 24px 300px -1% -1%;
+    }
 }
 
-/* Here are the media quieries that change the page layout depending on the screen size. */
 @media screen and (max-width: 1215px) {
     .grid-container {
         grid-template-columns: 1fr;
@@ -270,6 +302,9 @@ they also have a black background in case images cannot be loaded. */
         align-items: center;
         width: 100%;
     }
+    .project-box-top h2 {
+        margin: 24px 100px -1% -1%;
+    }
 }
 
 @media screen and (max-width: 860px) {
@@ -277,10 +312,43 @@ they also have a black background in case images cannot be loaded. */
         font-size: 16px;
         display: block;
     }
+    .project-box-top h2 {
+        margin: 24px 0px -1% -1%;
+    }
+    .profile-image {
+        top: 126px;
+        left: 0px;
+    }
+    #subtitle{
+        top: 350px;
+        right: 30px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 645px) {
+    #subtitle{
+        top: 86px;
+        right: 300px;
+        left: 0px;
+        padding: 10px;
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 550px) {
     .subhead {
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 508px) {
+    .profile-image {
+        top: 142px;
+    }
+    #subtitle{
+        font-size: 19.5px;
+        padding-top: 18px;
+        padding-bottom: 18px;
     }
 }
