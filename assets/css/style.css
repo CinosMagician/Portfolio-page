@@ -300,6 +300,13 @@ they also have a black background in case images cannot be loaded. */
     }
 }
 
+/* For in between Desktop and Tablet */
+@media screen and (max-width: 836px) {
+    .main-header ul li{
+        font-size: 18px;
+    }
+}
+
 /* Tablet */
 @media screen and (max-width: 768px) {
     .project-box {
@@ -318,7 +325,64 @@ they also have a black background in case images cannot be loaded. */
 }
 
 /* Mobile Large*/
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 718px) {
+    .project-box h2 {
+        margin: 24px 0px -2.5% -2.5%;
+        font-size: 16px;
+    }
+
+    .project-box-top h2 {
+        font-size: 16px;
+        margin: 24px 0px -2.5% -2.5%;
+    }
+
+    .project-box-top {
+        margin: 10px 10px;
+    }
+
+    .profile-image {
+        top: 139px;
+        left: 0px;
+    }
+
+    #subtitle{
+        top: 97px;
+        right: 220px;
+        left: 0px;
+        padding: 11px;
+        font-size: 20px;
+    }
+
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer a {
+        font-size: 18px;
+    }
+
+    .subhead {
+        font-size: 21px;
+    }
+
+    .main-header ul {
+        padding: 0px;
+    }
+    .main-header ul li{
+        list-style-type: none;
+        display: block;
+        font-size: 19px;
+        margin-left: 5px;
+        padding-bottom: 5px;
+    }
+}
+
+/* For inbetween Large and Medium Mobile */
+@media screen and (max-width: 476px) {
     .project-box h2 {
         margin: 24px 0px -2.5% -2.5%;
         font-size: 16px;
