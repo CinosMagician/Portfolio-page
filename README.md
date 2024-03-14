@@ -10,6 +10,10 @@ This webpage is still a work in progress, and as such, certain elements have bee
 
 Besides the GitHub link, none of the contact info is correct and will not take you anywhere as of this stage. These will also be updated in the future.
 
+## Known Issues
+
+<li> when viewing on iPhone 15 Pro Max, screen elements do not seem to scale as indented, this is not the same case when tested on iPhone 11.
+
 ## Usage
 
 Below are some images for the webpage:
