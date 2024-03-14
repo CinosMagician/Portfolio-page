@@ -12,7 +12,7 @@ Besides the GitHub link, none of the contact info is correct and will not take y
 
 ## Known Issues
 
-<li> when viewing on iPhone 15 Pro Max, screen elements do not seem to scale as indented, this is not the same case when tested on iPhone 11.
+<li> when viewing on iPhone 15 Pro Max in Safari, screen elements do not seem to scale as indented, this is not the same case when tested on iPhone 11. This error does not occur when viewing in the Chrome app on iPhone 15 Pro Max.
 
 ## Usage
 
