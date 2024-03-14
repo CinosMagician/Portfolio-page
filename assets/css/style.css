@@ -185,14 +185,11 @@ or make it work without it but I could not find the solution this time */
 }
 
 /* This class defines the container that is set up as a grid layout */
-.grid-container {
+.project-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-top: 80px;
-    /* row-gap: 56px;
-    column-gap: 24px; */
-    /* grid-template-columns: repeat(2, 1fr); */
 }
 
 /* These classes set up the project boxes with the sizing, colours and the animation effect */
@@ -288,15 +285,14 @@ they also have a black background in case images cannot be loaded. */
 
 /* Here are the media quieries that change the page layout depending on the screen size. */
 /* Laptop */
-@media screen and (max-width: 1440px) {
+@media screen and (min-width: 1440px) {
     .project-box {
         max-width: 40%;
-        margin: 0px 10px;
         margin-bottom: 50px;
     }
 
     .project-box h2 {
-        margin: 24px 100px -2.5% -2.5%;
+        margin: 24px 200px -2.5% -2.5%;
     }
 }
 
@@ -304,6 +300,13 @@ they also have a black background in case images cannot be loaded. */
 @media screen and (max-width: 836px) {
     .main-header ul li{
         font-size: 18px;
+    }
+}
+
+/* Laptop 1024 */
+@media screen and (max-width: 1400px) {
+    .project-box h2, .project-box-top h2 {
+        margin: 24px 100px -2.5% -2.5%;
     }
 }
 
@@ -315,7 +318,11 @@ they also have a black background in case images cannot be loaded. */
         margin-bottom: 50px;
     }
 
-    .project-box h2, .project-box-top h2 {
+    .project-box h2 {
+        margin: 24px 0px -2.5% -2.5%;
+    }
+
+    .project-box-top h2 {
         margin: 24px 100px -2.5% -2.5%;
     }
 
