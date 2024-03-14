@@ -375,7 +375,7 @@ they also have a black background in case images cannot be loaded. */
 }
 
 /* Mobile M */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 421px) {
     .profile-image {
         top: 177px;
         left: 0px;
@@ -391,7 +391,7 @@ they also have a black background in case images cannot be loaded. */
 }
 
 /* Mobile S */
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 320px) and (max-width: 374px) {
     #subtitle{
         top: 133px;
         right: 125px;
